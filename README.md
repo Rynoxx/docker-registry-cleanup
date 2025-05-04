@@ -2,7 +2,7 @@ Simple utility to delete images from a container registry.
 Use `-t` and `-i` to filter tags/images with regex.  
 Specify the number of tags per matching filter to keep with `-m`.  
 
-If --semver is specified it will ignore all tags which don't match a valid semver string.  
+If --semver
 
 Sometimes it'd be neccessary to run it multiple times with different paramters to clean all neccessary things.
 
@@ -15,7 +15,7 @@ To run this manually in a docker container
 docker run --rm <docker-image-path:TBA> ./docker-registry-cleanup -r "https://docker-registry.example.com/" -t "^dev-.*" -m 5
 ```
 
-To run as a scheduled cron job:
+To run as a scheduled cron job in kubernetes:
 ```yaml
 <TODO>
 ```
