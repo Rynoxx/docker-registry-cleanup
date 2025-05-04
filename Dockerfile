@@ -16,5 +16,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/release/docker-registry-cleanup .
 
-CMD ["./docker-registry-cleanup"]
+ENTRYPOINT ["./docker-registry-cleanup"]
+CMD [""]
 

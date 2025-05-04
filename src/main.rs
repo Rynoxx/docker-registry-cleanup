@@ -35,7 +35,7 @@ pub struct Args {
     /// Maximum number of images to keep per tag and regex pattern
     #[arg(short, long)]
     max_per_tag: NonZeroUsize,
-    /// Regex for tag whitelist, multiple can be specified if any match then it's in whitelist. If none, no action is taken
+    /// Regex for tag whitelist, multiple can be specified if any match then it's in whitelist. If none, no action is taken.
     /// The max_per_tag is applied per pattern here. Specifying two will result in two separate
     /// lists of tags for max_per_tag.
     #[arg(short, long)]
@@ -45,7 +45,7 @@ pub struct Args {
     images: Vec<String>,
     // TODO: Maybe an enum for things? Semver vs regex tags somewhat contradict each other if we
     // can't extract semver from the context.
-    /// Should the tags be sorted by semver?
+    /// Should the tags be sorted by semver? Ignores any non-semver tags.
     #[arg(short,long)]
     semver: bool,
     /// Run actual deletions. Otherwise it's dry-run by default
